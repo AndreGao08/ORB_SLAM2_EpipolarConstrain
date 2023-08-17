@@ -1,0 +1,34 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "g++ build and debug active file",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/mnt/docker_repo/SLAM/ORB-SLAM2-Epipolar/Examples/RGB-D/rgbd_tum",
+            "args": [
+                "/mnt/docker_repo/SLAM/ORB-SLAM2-Epipolar/Vocabulary/ORBvoc.txt",
+                "/mnt/docker_repo/SLAM/ORB-SLAM2-Epipolar/Examples/RGB-D/TUM3.yaml",
+                "/mnt/dataset/SLAM/DynamicObjects/rgbd_dataset_freiburg3_walking_xyz",
+                "/mnt/dataset/SLAM/DynamicObjects/rgbd_dataset_freiburg3_walking_xyz/associations.txt"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "rgbdtum",
+            "miDebuggerPath": "/usr/bin/gdb"
+        }
+    ]
+}
